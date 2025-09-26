@@ -1,4 +1,5 @@
 terraform { 
+    required_version = ">= 1.5"
     required_providers {
         aws = {
         source  = "hashicorp/aws"
@@ -19,6 +20,7 @@ provider "aws" {
   region = "ap-northeast-1"
 }
 
-resource "aws_s3_bucket" "imported" {
-  bucket = "sample-import-bucket"
+import {
+  to = aws_s3_bucket.imported
+  id = "{作成したbucket名}"
 }
