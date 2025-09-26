@@ -20,5 +20,5 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "imported" {
-  bucket = "sample-import-backet"
+  bucket = "sample-import-bucket"
 }
